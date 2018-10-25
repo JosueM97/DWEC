@@ -6,6 +6,9 @@ var expresion_regular_telefono = /^(6|7)[ -]*([0-9][ -]*){8}$/;
 var expresion_regular_ip = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 var expresion_regular_url = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
 var expresion_regular_nombre = /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/;
+var expresion_regular_apellidos = /^[a-zA-Z '.-]*$/;
+var expresion_regular_contrasenya = /^(?=.*[0-9])([a-zA-Z0-9]{8,})$/;
+//contraseña dificil //var expresion_regular_contrasenya = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,})$/;
 //DNI
 function validarDni(x){
         let numero;
@@ -50,7 +53,7 @@ function validarDni(x){
 
 //IP
 function validarIp(x){
-    ip = x.value;
+    var ip = x.value;
     if(expresion_regular_ip.test(ip)){
         //correcto
         document.getElementById('ip').style.color='green';
@@ -63,12 +66,49 @@ function validarIp(x){
 
 //NOMBRE
 function validarNombre(x){
-    nombre = x.value;
+    var nombre = x.value;
     if(expresion_regular_nombre.test(nombre)){
         //correcto
         document.getElementById('nombre').style.color='green';
     }else{
         //negativo
         document.getElementById('nombre').style.color='red';
+    }
+}
+
+//APELLIDOS
+function validarApellidos(x){
+    var apellidos = x.value;
+    if(expresion_regular_apellidos.test(apellidos)){
+        //correcto
+        document.getElementById('apellidos').style.color='green';
+    }else{
+        //negativo
+        document.getElementById('apellidos').style.color='red';
+    }
+}
+
+var contra;
+//Password
+function validarPassword(x){
+    var contrasenya = x.value;
+    contra = contrasenya;
+    if(expresion_regular_contrasenya.test(contrasenya)){
+        //correcto
+        document.getElementById('pass').style.color='green';
+    }else{
+        //negativo
+        document.getElementById('pass').style.color='red';
+    }
+    return contrasenya;
+}
+//repetir
+function validarRepetir(x){
+
+    var repe = x.value;
+    if(repe == contra){
+        document.getElementById('repetir').style.color='green';
+    }else{
+        document.getElementById('repetir').style.color='red';
     }
 }

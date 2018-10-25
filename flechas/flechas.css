@@ -1,0 +1,72 @@
+body,html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#uno{
+background-color: green;
+width: 50%;
+height: 50%;
+float: left;
+}
+#dos{
+background-color: blue;
+width: 50%;
+height: 50%;
+float: left;
+}
+#tres{
+background-color: yellow;
+width: 50%;
+height: 50%;
+float: left;
+}
+#cuatro{
+background-color: red;
+width: 50%;
+height: 50%;
+float: left;
+}
+
+
+#boton1{
+    position: absolute;
+    top: 25%;
+    left: 48.5%;
+
+}
+
+#boton2{
+    position: absolute;
+    top: 48.5%;
+    left: 75%;
+}
+
+#boton3{
+    position: absolute;
+    right: 48.5%;
+    top: 75%;
+}
+
+#boton4{
+    position: absolute;
+    left: 25%;
+    top: 48.5%;
+}
+
+p{
+    color: black;
+    position: relative;
+
+    left: 10%;
+    z-index: 2;
+}
+
+textarea{
+    color: black;
+    position: relative;
+    top: 10%;
+    left: 10%;
+    z-index: 2;
+}

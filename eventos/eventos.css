@@ -1,0 +1,39 @@
+div{
+    background-color: #bfbfbf;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 2%;
+    padding-left: 4%;
+    padding-bottom: 2%;
+    border: solid black 2px;
+    border-radius: 1%;
+    box-shadow: 4px 5px 4px 4px #888888;
+}
+
+button{
+    margin-left: 42%;
+    margin-top: 2%;
+    background-color: blue;
+    width: 10%;
+    padding-bottom: 1%;
+    color: white;
+    padding-top: 1%;
+}
+
+input{
+    width: 260%;
+    box-shadow: 4px 8px 4px 4px #888888;
+}
+
+td{
+  padding-bottom: 3%;  
+  text-align: right;
+  font-size: 20px;
+}
+
+
+p{
+    text-align: center;
+    font-size: 25px;
+}

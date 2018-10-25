@@ -1,0 +1,26 @@
+.lapiz{
+    width: 2.7%;
+
+}
+
+.equis{
+    width: 3%;
+
+}
+
+.fila{
+    margin-left: 6%;
+    margin-top: 3%;
+}
+
+.nombre,.dni,.apellidos{
+    margin-left: 2%;
+    float: left;
+}
+
+#suma{
+    float: right;
+    margin-top: 6%;
+    width: 10%;
+    margin-right: 10%;
+}
