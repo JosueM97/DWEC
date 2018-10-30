@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded",cargar,false);
 
 function cargar(){
     document.getElementById("suma").addEventListener("click",nuevaFila);
+    document.getElementsByClassName("equis").addEventListener("click",borrarTodo);
 }
 
 
@@ -74,4 +75,13 @@ function nuevaFila(){
     fila.appendChild(editar);
     
 
+}
+
+function borrarTodo(){
+    alert("prueba");
+    var textoVacio = "";
+    var celda = document.getElementsByClassName("dni")
+
+    document.textContent(" ");
+    alert("prueba");
 }

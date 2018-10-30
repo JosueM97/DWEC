@@ -18,9 +18,22 @@
     float: left;
 }
 
+
 #suma{
-    float: right;
-    margin-top: 6%;
-    width: 10%;
-    margin-right: 10%;
+    background-color: gray;
+    border: 2px solid black;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 70%;
+    right: 10%;
+
+    border-radius: 100px;
+}
+
+#suma p{
+    position: absolute;
+    top: 17%;
+    right: 44%;
+    font-size: 30px;
 }
