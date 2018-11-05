@@ -1,0 +1,20 @@
+
+#video{
+    margin-left: 30%;
+    margin-top: 5%;
+    border-radius: 15px;
+}
+
+.botones{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+
+#mute{
+    margin-left: 35.5%;
+    
+}
+#forward{
+    transform: rotate(180deg);
+}
