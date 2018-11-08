@@ -9,6 +9,7 @@ function cargar(){
     document.getElementById("play").addEventListener("click",reproducir);
     document.getElementById("forward").addEventListener("click",adelantar);
     document.getElementById("reload").addEventListener("click",recargar);
+    document.getElementById("barraVideo").addEventListener("click",barraVideo);
     /*
     document.getElementById("volumeDown").addEventListener("click",bajarVolumnen);
     document.getElementById("volumenUp").addEventListener("click",subirVolumen);
@@ -85,4 +86,12 @@ function subirVolumnen(){
 
     var volumenActual = video.volume;
     video.volume = volumenActual + 0.1;
+}
+
+function barraVideo() {
+    var momentoVideo = this.currentTime;
+    var total = this.duration;
+    var barra = document.getElementById("barraVideo");
+
+    barra.value = (100 * momentoVideo) / total;
 }

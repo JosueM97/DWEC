@@ -18,3 +18,14 @@
 #forward{
     transform: rotate(180deg);
 }
+
+#barraDiv{
+    margin-top: 2%;
+    margin-left: 33%;
+}
+#barraDiv2{
+    margin-left: 33%;
+}
+progress{
+    width: 50%;
+}
