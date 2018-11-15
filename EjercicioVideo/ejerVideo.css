@@ -29,3 +29,13 @@
 progress{
     width: 50%;
 }
+
+.otrosVideos{
+    width: 45%;
+}
+
+.divSeleccionar{
+    position: absolute;
+    top: 13%;
+    left: 73%;
+}

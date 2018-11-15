@@ -9,7 +9,7 @@ function cargar(){
     document.getElementById("play").addEventListener("click",reproducir);
     document.getElementById("forward").addEventListener("click",adelantar);
     document.getElementById("reload").addEventListener("click",recargar);
-    document.getElementById("barraVideo").addEventListener("click",barraVideo);
+    document.getElementById("barraVideo").addEventListener("timeupdate",barraVideo,false);
     /*
     document.getElementById("volumeDown").addEventListener("click",bajarVolumnen);
     document.getElementById("volumenUp").addEventListener("click",subirVolumen);
