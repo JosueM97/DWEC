@@ -1,5 +1,5 @@
 
-var celdas = ["", "", "", "", "", "", "", "", "","",""];
+var celdas = ["", "", "", "", "", "", "", "", ""];
 
 
 document.addEventListener("DOMContentLoaded", cargar, false);
@@ -28,9 +28,9 @@ function ponerX() {
         var numeroCelda = auxiliarCelda[5];
 
         //le asigna x
-        celdas[numeroCelda - 1] = "X";
+        celdas[numeroCelda-1] = "X";
 
-        console.log(numeroCelda + celdas[numeroCelda - 1]);
+        console.log(numeroCelda + celdas[numeroCelda-1]);
 
 
         //Creacion
@@ -42,21 +42,45 @@ function ponerX() {
         h1.appendChild(equis);;
         nodoPadre.appendChild(h1);
         console.log(celdas);
-        ponerO();
+
+        comprobarVictoriaJugador();
     }
 
+    function comprobarVictoriaJugador() {
+        var seguir = true;
+        //HORIZONTAL
+        if((celdas[0] == "X" && celdas[1] == "X" && celdas[2] == "X") || (celdas[3] == "X" && celdas[4] == "X" && celdas[5] == "X") || (celdas[6] == "X" && celdas[7] == "X" && celdas[8] == "X")){
+            alert("Has ganado");
+            seguir = false;
+        }
 
+        //VERTICAL
+        if((celdas[0] == "X" && celdas[3] == "X" && celdas[6] == "X") || (celdas[1] == "X" && celdas[4] == "X" && celdas[7] == "X") || (celdas[2] == "X" && celdas[5] == "X" && celdas[8] == "X")){
+            alert("Has ganado");
+            seguir = false;
+        }
+
+        //DIAGONAL
+        if((celdas[0] == "X" && celdas[4] == "X" && celdas[8] == "X") || (celdas[2] == "X" && celdas[4] == "X" && celdas[6] == "X")){
+            alert("Has ganado");
+            seguir = false;
+        }
+        //Para seguir si no se ha ganado aun
+        if(seguir){
+            ponerO();
+        }
+    }
 
 }
 
 function ponerO() {
 
-    var numeroRandom = Math.floor(Math.random() * (celdas.length) + 1);
+    var numeroRandom = Math.floor(Math.random() * (celdas.length -1 ) + 1);
     console.log(numeroRandom);
     console.log(celdas[numeroRandom]);
-    if (celdas[numeroRandom] != "X" || celdas[numeroRandom] != "O") {
+    if (document.getElementById("celda" + numeroRandom).innerHTML == "") {
         document.getElementById("celda" + numeroRandom).innerHTML = "O";
-        celdas[numeroRandom - 1] = "O";
+        celdas[numeroRandom-1] = "O";
 
     } else {
         console.log("para");
@@ -64,4 +88,23 @@ function ponerO() {
     }
 
     console.log(celdas);
+    comprobarVictoriaIA();
+}
+
+function comprobarVictoriaIA() {
+    var seguir = true;
+    //HORIZONTAL
+    if((celdas[0] == "O" && celdas[1] == "O" && celdas[2] == "O") || (celdas[3] == "O" && celdas[4] == "O" && celdas[5] == "O") || (celdas[6] == "O" && celdas[7] == "O" && celdas[8] == "O")){
+        alert("Has perdido");
+    }
+
+    //VERTICAL
+    if((celdas[0] == "O" && celdas[3] == "O" && celdas[6] == "O") || (celdas[1] == "O" && celdas[4] == "O" && celdas[7] == "O") || (celdas[2] == "O" && celdas[5] == "O" && celdas[8] == "O")){
+        alert("Has perdido");
+    }
+
+    //DIAGONAL
+    if((celdas[0] == "O" && celdas[4] == "O" && celdas[8] == "O") || (celdas[2] == "O" && celdas[4] == "O" && celdas[6] == "O")){
+        alert("Has perdido");
+    }
 }
