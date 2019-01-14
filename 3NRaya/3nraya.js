@@ -75,12 +75,21 @@ function ponerX() {
 
 function ponerO() {
 
+    //Genera un numero random entre 1 y 9 (creo)
     var numeroRandom = Math.floor(Math.random() * (celdas.length -1 ) + 1);
     console.log(numeroRandom);
     console.log(celdas[numeroRandom]);
     if (document.getElementById("celda" + numeroRandom).innerHTML == "") {
-        document.getElementById("celda" + numeroRandom).innerHTML = "O";
-        celdas[numeroRandom-1] = "O";
+
+        //Un temporizador tope guapo
+        timout=setTimeout(function(){
+
+            //Se escribe en la celda
+            document.getElementById("celda" + numeroRandom).innerHTML = "O";
+            //Se escribe en la matriz
+            celdas[numeroRandom-1] = "O";
+
+        },500,"JavaScript");
 
     } else {
         console.log("para");
